@@ -70,16 +70,9 @@ library
     , containers
     , time
     , twitter-types >= 0.6
-    , twitter-types-lens
+    , twitter-types-lens >= 0.6
     , lens-aeson
-    
-  if flag(lens-aeson)
-    build-depends:
-        lens-aeson >= 1
-      , lens
-  else
-    build-depends:
-        lens
+    , lens >= 4.11 && <= 4.12
 
   exposed-modules:
     Web.Twitter.Conduit
